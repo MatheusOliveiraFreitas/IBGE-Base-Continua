@@ -1,0 +1,61 @@
+# This file contains metadata for your plugin.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=IBGE Base Continua
+qgisMinimumVersion=3.0
+description=Este complemento facilita o acesso e o uso dos dados da Base Cartográfica Contínua do IBGE (como BC250, BC100 e BC25) diretamente no QGIS.
+version=1.0
+author=Matheus Oliveira de Freitas
+email=matheus18.1@yahoo.com
+
+about=-Funcionamento:
+	
+	🔹Visualização das Camadas disponiveis.
+		*Conecta-se ao geoserviço do IBGE para obter a lista mais recente de dados disponíveis.
+	🔹Seleção de Camadas:
+		*Apresenta ao usuário Lista para selecionar a escala/produto desejado (ex: BC250_2023, BC100_GO_DF, BC25_RJ).
+	🔹Download e Carregamento:
+		*O download dos dados é feito em segundo plano (usando QgsTask), o que impede que a interface do QGIS trave durante a aquisição de dados pesados.
+		*O usuário tem duas opções de saída para as camadas selecionadas:
+			=>Salvar em GeoPackage: Permite salvar todas as camadas selecionadas dentro de um único arquivo .gpkg no computador.
+			=>Camadas Temporárias: Carrega as camadas em memória, ideal para visualização rápida sem salvar arquivos permanentes.
+	🔹Aplicação de Estilo:
+		*Após carregar a camada (seja do GeoPackage ou temporária), o plugin automaticamente aplica a simbologia QML correspondente. Ele localiza o arquivo .qml correto dentro da pasta Simbologia/ do plugin, garantindo que os dados sejam exibidos com o estilo visual correto do IBGE.
+
+# End of mandatory metadata
+
+tracker=http://bugs
+repository=http://repo
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=no
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=python
+
+homepage=http://homepage
+category=Web
+icon=icon.png
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+Category of the plugin: Raster, Vector, Database or Web
+category= Web
+
+# If the plugin can run on QGIS Server.
+server=False
+

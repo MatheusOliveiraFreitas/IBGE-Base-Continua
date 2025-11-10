@@ -5,7 +5,7 @@
 [general]
 name=IBGE Base Continua
 qgisMinimumVersion=3.0
-description=Este complemento facilita o acesso e o uso dos dados da Base Cartográfica Contínua do IBGE (como BC250, BC100 e BC25) diretamente no QGIS.
+description=Este complemento facilita o acesso e o uso dos dados da Base Cartográfica Contínua do IBGE (como BC250, BC100 e BC25) diretamente no QGIS,além de aplicar uma simbologia.
 version=1.0
 author=Matheus Oliveira de Freitas
 email=matheus18.1@yahoo.com
@@ -26,8 +26,8 @@ about=-Funcionamento:
 
 # End of mandatory metadata
 
-tracker=http://bugs
-repository=http://repo
+tracker=https://github.com/MatheusOliveiraFreitas/IBGE-Base-Continua
+repository=https://github.com/MatheusOliveiraFreitas/IBGE-Base-Continua
 # End of mandatory metadata
 
 # Recommended items:
@@ -37,9 +37,9 @@ hasProcessingProvider=no
 # changelog=
 
 # Tags are comma separated with spaces allowed
-tags=python
+tags=ibge, brasil, wfs, cartografia, download, geopackage
 
-homepage=http://homepage
+homepage=https://github.com/MatheusOliveiraFreitas/IBGE-Base-Continua
 category=Web
 icon=icon.png
 # experimental flag
@@ -54,7 +54,7 @@ deprecated=False
 # plugin_dependencies=
 
 Category of the plugin: Raster, Vector, Database or Web
-category= Web
+
 
 # If the plugin can run on QGIS Server.
 server=False

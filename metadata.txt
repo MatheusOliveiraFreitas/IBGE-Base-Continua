@@ -3,21 +3,21 @@
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=IBGE Base Continua
-qgisMinimumVersion=3.0
-description=Este complemento facilita o acesso e o uso dos dados da Base Cartográfica Contínua do IBGE (como BC250, BC100 e BC25) diretamente no QGIS,além de aplicar uma simbologia.
+name=IBGE Base Cartográfica Contínua
+qgisMinimumVersion=3.22
+description=Este complemento facilita o acesso e o uso dos dados das Bases Cartográficas Contínuas do IBGE (como BC250, BC100 e BC25) diretamente no QGIS, além de aplicar automaticamente a simbologia correspondente.
 version=1.0
 author=Matheus Oliveira de Freitas
 email=matheus18.1@yahoo.com
 
 about=-Funcionamento:
 	
-	🔹Visualização das Camadas disponiveis.
-		*Conecta-se ao geoserviço do IBGE para obter a lista mais recente de dados disponíveis.
+	🔹Visualização das Camadas disponíveis:
+		*Conecta-se ao geoserviço do IBGE para obter a lista mais recente de dados disponíveis das Bases Cartográficas Contínuas.
 	🔹Seleção de Camadas:
-		*Apresenta ao usuário Lista para selecionar a escala/produto desejado (ex: BC250_2023, BC100_GO_DF, BC25_RJ).
+		*Apresenta ao usuário uma lista para selecionar a escala/produto desejado (ex.: BC250_2023, BC100_GO_DF, BC25_RJ).
 	🔹Download e Carregamento:
-		*O download dos dados é feito em segundo plano (usando QgsTask), o que impede que a interface do QGIS trave durante a aquisição de dados pesados.
+		*O download dos dados é realizado em segundo plano (usando QgsTask), o que impede que a interface do QGIS trave durante a aquisição de dados pesados.
 		*O usuário tem duas opções de saída para as camadas selecionadas:
 			=>Salvar em GeoPackage: Permite salvar todas as camadas selecionadas dentro de um único arquivo .gpkg no computador.
 			=>Camadas Temporárias: Carrega as camadas em memória, ideal para visualização rápida sem salvar arquivos permanentes.

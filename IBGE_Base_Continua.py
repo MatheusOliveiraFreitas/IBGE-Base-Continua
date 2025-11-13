@@ -295,7 +295,7 @@ class IbgeBaseContinua:
 
         # Declare instance attributes
         self.actions = []
-        self.menu = self.tr(u'&IBGE Base Continua')
+        self.menu = self.tr(u'&IBGE Base Cartográfica Contínua')
 
         # Check if plugin was started the first time in current QGIS session
         # Must be set in initGui() to survive plugin reloads
@@ -382,9 +382,7 @@ class IbgeBaseContinua:
             self.iface.addToolBarIcon(action)
 
         if add_to_menu:
-            self.iface.addPluginToMenu(
-                self.menu,
-                action)
+            self.iface.webMenu().addAction(action)
 
         self.actions.append(action)
 
@@ -396,7 +394,7 @@ class IbgeBaseContinua:
         icon_path = ':/plugins/IBGE_Base_Continua/icon.png'
         self.add_action(
             icon_path,
-            text=self.tr(u'IBGE Base Continua'),
+            text=self.tr(u'IBGE Base Cartográfica Contínua'),
             callback=self.run,
             parent=self.iface.mainWindow())
 
@@ -407,11 +405,10 @@ class IbgeBaseContinua:
     def unload(self):
         """Removes the plugin menu item and icon from QGIS GUI."""
         for action in self.actions:
-            self.iface.removePluginMenu(
-                self.tr(u'&IBGE Base Continua'),
-                action)
+            # Remove a ação do menu 'Web'
+            self.iface.webMenu().removeAction(action)
             self.iface.removeToolBarIcon(action)
-            
+        
 
     def carregar_Classe(self, textEdit):
         

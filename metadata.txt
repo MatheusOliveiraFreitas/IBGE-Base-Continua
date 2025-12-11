@@ -6,7 +6,7 @@
 name=IBGE Base Cartográfica Contínua
 qgisMinimumVersion=3.22
 description=Este complemento facilita o acesso e o uso dos dados das Bases Cartográficas Contínuas do IBGE (como BC250, BC100 e BC25) diretamente no QGIS, além de aplicar automaticamente a simbologia correspondente.
-version=1.0
+version=1.1
 author=Matheus Oliveira de Freitas
 email=matheus18.1@yahoo.com
 
@@ -34,7 +34,7 @@ repository=https://github.com/MatheusOliveiraFreitas/IBGE-Base-Continua
 
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
-# changelog=
+# changelog=Continuous cartographic base 250,000
 
 # Tags are comma separated with spaces allowed
 tags=ibge, brasil, wfs, cartografia, download, geopackage

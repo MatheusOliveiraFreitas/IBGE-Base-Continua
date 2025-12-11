@@ -76,7 +76,9 @@ class CarregarFeicoesTask(QgsTask):
             return camada[22:]
         elif camada.startswith(('BC100_ES_')):
             return camada[9:]
-                            
+            
+        if camada.startswith(('BC250_2025_')):
+            return camada[15:]
         else:
             return camada[17:]
     def run(self):
@@ -181,7 +183,7 @@ class CarregarFeicoesTask(QgsTask):
                 camada_salva.updateFields()
 
                 #Aplicar a Simbologia. Caso nao tenha a simbologia ou nao encontre nao vai dar erro
-                c=self.simbologia(adicionar)  #Saber o nome da camada sem BC... Apenas o nome                
+                c=self.simbologia(adicionar)  #Saber o nome da camada sem BC... Apenas o nome        
                 local=os.path.dirname(__file__) #Local onde esta salvo o complemento                
                 cami=os.path.join(local, 'Simbologia', f'{c}.qml') #Mesclar o local + Simbologia + nome da camada +qml                
                 camada_salva.loadNamedStyle(f"{cami}") #Adicionar a Simbologia
@@ -214,7 +216,7 @@ class CarregarFeicoesTask(QgsTask):
 
                 features_origem = list(cam_tem.getFeatures())
                 c=self.simbologia(nome_t)
-
+                c.title()
                 # Adiciona todas de uma vez
                 prov.addFeatures(features_origem)
 
@@ -513,7 +515,7 @@ class IbgeBaseContinua:
         
     def configurarComboBox(self):
         # Lista de escalas
-        escalas = ['BC250_2023','BC250_2021','BC250_2019','BC250_2017','BC100_SE','BC100_GO_DF','BC100_RS','BC100_ES','BC100_AL','BC100_AC', 'BC25_RJ']     
+        escalas = ['BC250_2025','BC250_2023','BC250_2021','BC250_2019','BC250_2017','BC100_SE','BC100_GO_DF','BC100_RS','BC100_ES','BC100_AL','BC100_AC', 'BC25_RJ']     
         # Limpa qualquer item pré-existente no comboBox
         self.dlg.comboBox.clear()        
         # Adiciona os itens ao comboBox

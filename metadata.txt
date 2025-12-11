@@ -34,7 +34,7 @@ repository=https://github.com/MatheusOliveiraFreitas/IBGE-Base-Continua
 
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
-# changelog=Continuous cartographic base 250,000
+# changelog=adição da nova base cartográfica contínua 250 000 de 2025//addition of the new continuous cartographic base 250,000 of 2025
 
 # Tags are comma separated with spaces allowed
 tags=ibge, brasil, wfs, cartografia, download, geopackage
